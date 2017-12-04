@@ -20,8 +20,8 @@ def map_to_prime_products(list_of_words):
 def calc_valid_passphrases2(input):
     lines = input.splitlines()
     passphrases = map(lambda x: x.split(), lines)
-    prime_sums = map(map_to_prime_products, passphrases)
-    valid = filter(lambda x: len(x) == len(set(x)), prime_sums)
+    prime_products = map(map_to_prime_products, passphrases)
+    valid = filter(lambda x: len(x) == len(set(x)), prime_products)
     return len(valid)
 
 with open ('4/input.txt') as inputFile:
